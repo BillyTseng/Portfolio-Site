@@ -19,7 +19,15 @@ body {
 img {
     max-width: 50%;
     height: auto;
+    display: block;
+    margin: auto;
 }
+
+/*
+ *
+ * header
+ *
+ */
 
 .header {
     color: #2d3c49;
@@ -61,6 +69,12 @@ img {
   font-size: 2em;
 }
 
+/*
+ *
+ * text contents
+ *
+ */
+
 section h2 {
   font-weight: 500;
   margin:1em 1em;
@@ -68,13 +82,58 @@ section h2 {
   color: #7d97ad;
 }
 
-section p, li{
+section p, li {
   margin:0.5em 5em;
   font-size: 2em;
 }
 
+/*
+ *
+ * .projects
+ *
+ */
+.container {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.box {
+  width: 33%;
+  height: 100%;
+}
+
+figure .img__projects {
+  height: 200px;
+}
+
+.project_name {
+  font-size: 2em;
+  color: #2d3c49;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0.5em;
+}
+
+.url {
+  font-size: 1em;
+  text-align: center;
+}
+
+.CC {
+  margin: 0.5em;
+}
+
+/*
+ *
+ * responsive design
+ *
+ */
+
+/* Nexus 5 Portrait*/
 @media screen and (max-width: 420px) {
-  img {max-width: 120%;}
+  .header__logo {max-width: 120%;}
   .header__title {font-size: 2.5em;}
   .sub_header__title {font-size: 1.5em;}
 
@@ -85,10 +144,29 @@ section p, li{
 
   section p, li {
     margin:0.5em 2em;
-    font-size: 1.5em;
+    font-size: 1em;
+  }
+
+  .box {width: 100%;}
+  .img__projects {max-width: 40%;}
+
+  .project_name {font-size: 1.5em;}
+  .url {font-size: 1em;}
+  figure .img__projects {
+    height: 100%;
+    width: 100%;
   }
 }
 
+/* iPad Portrait*/
 @media screen and (min-width: 421px) and (max-width: 768px) {
-  img {max-width: 75%;}
+  .header__logo {max-width: 75%;}
+  figure .img__projects {height: 90px;}
+  .project_name {font-size: 1.2em;}
+}
+
+/* iPad Landscape*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  figure .img__projects {height: 100px;}
+  .project_name {font-size: 1.5em;}
 }
