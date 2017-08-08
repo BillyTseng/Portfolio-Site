@@ -61,7 +61,7 @@ img {
   float: right;
   clear: both;
   overflow: auto;
-  margin: 0.5em 0em 0em 0em;
+  margin: 0.5em 0 0 0;
 }
 
 .sub_header__title {
@@ -77,14 +77,22 @@ img {
 
 section h2 {
   font-weight: 500;
-  margin:1em 1em;
+  margin: 1em 1em;
   font-size: 2em;
   color: #7d97ad;
 }
 
 section p, li {
-  margin:0.5em 5em;
+  margin: 0.5em 5em;
   font-size: 2em;
+}
+
+.tree_img figure {
+  margin: 1.5em;
+}
+
+.tree_img p {
+    max-width: 50%;
 }
 
 /*
@@ -104,10 +112,6 @@ section p, li {
   height: 100%;
 }
 
-figure .img__projects {
-  height: 200px;
-}
-
 .project_name {
   font-size: 2em;
   color: #2d3c49;
@@ -119,11 +123,12 @@ figure .img__projects {
 .url {
   font-size: 1em;
   text-align: center;
-  margin: 0em 0em;
+  margin: 0.5em 0;
+  overflow-wrap: break-word;
 }
 
 .cc {
-  margin: 0.5em;
+  margin: auto;
   font-size: 1em;
 }
 
@@ -135,9 +140,15 @@ figure .img__projects {
 
 /* Nexus 5 Portrait*/
 @media screen and (max-width: 420px) {
-  .header__logo {max-width: 120%;}
-  .header__title {font-size: 2.5em;}
-  .sub_header__title {font-size: 1.5em;}
+  .header__logo {
+    max-width: 120%;
+  }
+  .header__title {
+    font-size: 2.5em;
+  }
+  .sub_header__title {
+    font-size: 1.5em;
+  }
 
   section h2 {
     margin:1em 1em;
@@ -149,11 +160,19 @@ figure .img__projects {
     font-size: 1em;
   }
 
-  .box {width: 100%;}
-  .img__projects {max-width: 40%;}
+  .box {
+    width: 100%;
+  }
+  .img__projects {
+    max-width: 40%;
+  }
 
-  .project_name {font-size: 1.5em;}
-  .url {font-size: 1em;}
+  .project_name {
+    font-size: 1.5em;
+  }
+  .url {
+    font-size: 1em;
+  }
   figure .img__projects {
     height: 100%;
     width: 100%;
@@ -162,13 +181,17 @@ figure .img__projects {
 
 /* iPad Portrait*/
 @media screen and (min-width: 421px) and (max-width: 768px) {
-  .header__logo {max-width: 75%;}
-  figure .img__projects {height: 90px;}
-  .project_name {font-size: 1.2em;}
+  .header__logo {
+    max-width: 75%;
+  }
+  .project_name {
+    font-size: 1.2em;
+  }
 }
 
 /* iPad Landscape*/
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  figure .img__projects {height: 100px;}
-  .project_name {font-size: 1.5em;}
+  .project_name {
+    font-size: 1.5em;
+  }
 }
